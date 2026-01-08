@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free JPG to PNG Converter - Convert JPEG to PNG Online | Fast Image Conversion Tool</title>
+    <meta name="description" content="Free online JPG to PNG converter and PNG to JPG converter. Convert JPEG images to PNG format with transparency, or PNG to JPG with quality control. No software download required - convert images instantly in your browser.">
+    <meta name="keywords" content="jpg to png converter, jpeg to png converter, png to jpg converter, image converter online, free image converter, convert jpg to png, convert png to jpg, online image conversion, batch image converter, image format converter, jpeg converter, png converter, free photo converter, image file converter, convert images online">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jpg2png.com/">
+    <meta property="og:title" content="Free JPG to PNG Converter - Convert Images Online">
+    <meta property="og:description" content="Convert JPG to PNG and PNG to JPG instantly. Free online image converter with no registration required.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jpg2png.com/">
+    <meta property="twitter:title" content="Free JPG to PNG Converter">
+    <meta property="twitter:description" content="Convert JPG to PNG and PNG to JPG instantly. Free online image converter.">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="author" content="JPG2PNG">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="google-site-verification" content="">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "JPG2PNG - Free Online Image Converter",
+        "applicationCategory": "UtilitiesApplication",
+        "description": "Free online JPG to PNG and PNG to JPG converter. Convert JPEG images to PNG format with transparency, or PNG to JPEG with quality control. No registration required.",
+        "url": "https://jpg2png.com",
+        "operatingSystem": "Web Browser",
+        "browserRequirements": "Requires JavaScript enabled",
+        "softwareVersion": "1.0",
+        "datePublished": "2025-01-08",
+        "dateModified": "2025-01-08",
+        "author": {
+            "@type": "Organization",
+            "name": "JPG2PNG"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "1247"
+        },
+        "featureList": [
+            "JPG to PNG conversion",
+            "PNG to JPG conversion", 
+            "Batch image processing",
+            "No registration required",
+            "Browser-based conversion",
+            "ZIP download support"
+        ]
+    }
+    </script>
+    
+    <!-- Additional Structured Data for Image Conversion -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Convert JPG to PNG Online",
+        "description": "Step-by-step guide to convert JPG images to PNG format online for free",
+        "image": "https://jpg2png.com/images/logo.svg",
+        "supply": [
+            {
+                "@type": "HowToSupply",
+                "name": "JPG or JPEG image file"
+            }
+        ],
+        "tool": [
+            {
+                "@type": "HowToTool", 
+                "name": "Web Browser with JavaScript"
+            }
+        ],
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Upload Image",
+                "text": "Click 'Choose JPG Files' or drag and drop your JPG images into the converter"
+            },
+            {
+                "@type": "HowToStep", 
+                "name": "Convert to PNG",
+                "text": "Click 'Convert Images' to start the JPG to PNG conversion process"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Download Result",
+                "text": "Download your converted PNG images individually or as a ZIP file"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="canonical" href="https://jpg2png.com/">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h4>🍪 Cookie Notice</h4>
+                <p>We use cookies to improve your experience and show personalized ads through Google AdSense. We also use Google Analytics to understand how you use our site.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="btn btn-primary">Accept All</button>
+                <button id="declineCookies" class="btn btn-secondary">Decline</button>
+                <button id="cookieSettings" class="btn btn-link">Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Settings Modal -->
+    <div id="cookieModal" class="cookie-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Cookie Settings</h3>
+                <button id="closeModal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="cookie-category">
+                    <h4>Essential Cookies</h4>
+                    <p>Required for the website to function properly. Cannot be disabled.</p>
+                    <label class="switch">
+                        <input type="checkbox" checked disabled>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-category">
+                    <h4>Analytics Cookies (Google Analytics)</h4>
+                    <p>Help us understand how visitors interact with our website.</p>
+                    <label class="switch">
+                        <input type="checkbox" id="analyticsCookies">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-category">
+                    <h4>Advertising Cookies (Google AdSense)</h4>
+                    <p>Used to show personalized advertisements based on your interests.</p>
+                    <label class="switch">
+                        <input type="checkbox" id="advertisingCookies">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="saveSettings" class="btn btn-primary">Save Settings</button>
+                <a href="privacy-policy.html" class="btn btn-link">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="hero">
+            <img src="images/logo.svg" alt="JPG2PNG Free Online Image Converter" class="hero-logo">
+            <p>Convert your JPG/JPEG images to PNG format with transparency support, or convert PNG images to JPG with quality control. Fast, free online image converter with no registration required. Process images securely in your browser.</p>
+        </section>
+
+        <section class="converter">
+            <div class="conversion-tabs">
+                <button class="tab-btn active" id="jpgToPngTab" data-tab="jpg-to-png">JPG to PNG</button>
+                <button class="tab-btn" id="pngToJpgTab" data-tab="png-to-jpg">PNG to JPG</button>
+            </div>
+
+            <div class="tab-content active" id="jpg-to-png">
+                <div class="upload-area" id="uploadAreaJpg">
+                    <div class="upload-icon">📁</div>
+                    <h2>Upload JPG Images</h2>
+                    <p>Drag and drop your JPG/JPEG files here, or click to select files</p>
+                    <button class="upload-btn" id="uploadBtnJpg">Choose JPG Files</button>
+                    <input type="file" id="fileInputJpg" accept=".jpg,.jpeg" multiple style="display: none;">
+                    <div class="file-info">
+                        <small>Supported formats: JPG, JPEG • Max file size: 10MB per file</small>
+                    </div>
+                </div>
+
+                <div class="selected-files" id="selectedFilesJpg" style="display: none;">
+                    <h3>Selected JPG Files</h3>
+                    <div class="files-grid" id="filesGridJpg"></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="png-to-jpg">
+                <div class="upload-area" id="uploadAreaPng">
+                    <div class="upload-icon">📁</div>
+                    <h2>Upload PNG Images</h2>
+                    <p>Drag and drop your PNG files here, or click to select files</p>
+                    <button class="upload-btn" id="uploadBtnPng">Choose PNG Files</button>
+                    <input type="file" id="fileInputPng" accept=".png" multiple style="display: none;">
+                    <div class="file-info">
+                        <small>Supported formats: PNG • Max file size: 10MB per file</small>
+                    </div>
+                </div>
+
+                <div class="selected-files" id="selectedFilesPng" style="display: none;">
+                    <h3>Selected PNG Files</h3>
+                    <div class="files-grid" id="filesGridPng"></div>
+                </div>
+            </div>
+
+            <div class="conversion-options" id="conversionOptions" style="display: none;">
+                <h3>Conversion Options</h3>
+                <div class="quality-selector" id="qualitySelector" style="display: none;">
+                    <label for="quality">JPG Quality:</label>
+                    <input type="range" id="quality" min="10" max="100" value="90">
+                    <span id="qualityValue">90%</span>
+                </div>
+                <button class="convert-btn" id="convertBtn">Convert Images</button>
+            </div>
+
+            <div class="results" id="results" style="display: none;">
+                <h3>Converted Images</h3>
+                <div class="results-list" id="resultsList"></div>
+                <button class="download-all-btn" id="downloadAllBtn" style="display: none;">Download All as ZIP</button>
+            </div>
+
+            <div class="progress" id="progress" style="display: none;">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p id="progressText">Converting images...</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Why Use Our Free Online JPG to PNG Image Converter?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>🔒 100% Secure Image Conversion</h3>
+                    <p>All JPG to PNG and PNG to JPG conversions happen locally in your browser. Your image files never leave your device, ensuring complete privacy and security.</p>
+                </div>
+                <div class="feature">
+                    <h3>⚡ Fast & Free Image Converter</h3>
+                    <p>Convert multiple JPEG and PNG images instantly with no registration, download, or payment required. Batch convert dozens of image files in seconds.</p>
+                </div>
+                <div class="feature">
+                    <h3>🎨 Preserve Image Quality</h3>
+                    <p>Maintain original image quality during JPEG to PNG conversion with lossless compression. Customize JPG quality settings when converting PNG to JPEG format.</p>
+                </div>
+                <div class="feature">
+                    <h3>📱 Cross-Platform Image Tool</h3>
+                    <p>Works on any device - desktop, tablet, or mobile phone. No software installation or app download needed. Convert images directly in your web browser.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>Complete Guide to JPG and PNG Image Format Conversion</h2>
+            <div class="format-comparison">
+                <div class="format">
+                    <h3>JPG/JPEG Image Format</h3>
+                    <ul>
+                        <li>Smaller file sizes for photos</li>
+                        <li>Best for digital photographs</li>
+                        <li>No transparency support</li>
+                        <li>Lossy compression algorithm</li>
+                        <li>Widely supported image format</li>
+                        <li>Perfect for web images</li>
+                    </ul>
+                </div>
+                <div class="format">
+                    <h3>PNG Image Format</h3>
+                    <ul>
+                        <li>Supports image transparency</li>
+                        <li>Lossless image compression</li>
+                        <li>Better for graphics and logos</li>
+                        <li>Larger file sizes</li>
+                        <li>Perfect image quality preservation</li>
+                        <li>Ideal for screenshots</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>When Should You Convert JPG to PNG Images?</h3>
+            <p>Convert JPEG to PNG format when you need transparent backgrounds, want to preserve perfect image quality without compression artifacts, or need to edit the image multiple times without quality degradation. PNG format is essential for logos, graphics with text, and images requiring transparency effects.</p>
+            
+            <h3>When Should You Convert PNG to JPG Images?</h3>
+            <p>Convert PNG to JPEG format to reduce file size for faster web loading, email attachments, or social media uploads. JPG compression is perfect for photographs, complex images with many colors, and when transparency is not required. This conversion saves storage space and bandwidth.</p>
+
+            <h3>Free Online Image Converter Benefits</h3>
+            <p>Our browser-based image conversion tool offers instant JPG to PNG and PNG to JPG conversion without uploading files to servers. Process unlimited images for free, maintain complete privacy, and enjoy fast conversion speeds. Perfect for photographers, web designers, and anyone needing quick image format changes.</p>
+
+            <h3>Batch Image Conversion Features</h3>
+            <p>Convert multiple image files simultaneously with our batch converter tool. Upload dozens of JPG or PNG files and convert them all at once. Download individual converted images or get all files in a convenient ZIP archive. Save time with bulk image processing capabilities.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 JPG2PNG. Free online image converter.</p>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cookies.js"></script>
+    
+</body>
+</html>

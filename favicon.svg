@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <style>
+      .text-orange { fill: #ff6b35; }
+      .text-purple { fill: #6f42c1; }
+      .text-teal { fill: #20c997; }
+      .bg-circle { fill: #ffffff; }
+      .border-circle { fill: none; stroke: #e9ecef; stroke-width: 1; }
+    </style>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" class="bg-circle"/>
+  <circle cx="16" cy="16" r="15" class="border-circle"/>
+  
+  <!-- JPG text -->
+  <text x="4" y="20" font-family="Arial, sans-serif" font-size="7" font-weight="700" class="text-orange">JPG</text>
+  
+  <!-- 2 text -->
+  <text x="16.5" y="20" font-family="Arial, sans-serif" font-size="7" font-weight="700" class="text-purple">2</text>
+  
+  <!-- PNG text -->
+  <text x="21" y="20" font-family="Arial, sans-serif" font-size="7" font-weight="700" class="text-teal">PNG</text>
+</svg>
