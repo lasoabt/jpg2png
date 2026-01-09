@@ -144,7 +144,7 @@ class CookieConsent {
         // Google Analytics tracking code
         const script1 = document.createElement('script');
         script1.async = true;
-        script1.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+        script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-9NWDB6NP54';
         document.head.appendChild(script1);
 
         const script2 = document.createElement('script');
@@ -152,7 +152,7 @@ class CookieConsent {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'GA_MEASUREMENT_ID', {
+            gtag('config', 'G-9NWDB6NP54', {
                 page_title: document.title,
                 page_location: window.location.href
             });
@@ -167,7 +167,7 @@ class CookieConsent {
         // Google AdSense script
         const script = document.createElement('script');
         script.async = true;
-        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID';
+        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5777587918363886';
         script.crossOrigin = 'anonymous';
         document.head.appendChild(script);
 
