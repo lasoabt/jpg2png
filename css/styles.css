@@ -16,6 +16,7 @@ body {
     height: 160px;
     width: auto;
     margin-bottom: 2rem;
+    max-width: 90%;
 }
 
 main {
@@ -881,6 +882,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .hero-logo {
+        height: 100px;
+        margin-bottom: 1.5rem;
+    }
+    
     .hero h1 {
         font-size: 2rem;
     }
@@ -912,9 +918,40 @@ footer {
     .format-comparison {
         grid-template-columns: 1fr;
     }
+    
+    .result-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .result-info {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .result-preview {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        max-height: 150px;
+    }
+    
+    .download-btn {
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
+    .hero-logo {
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+    
     .hero h1 {
         font-size: 1.5rem;
     }
@@ -927,5 +964,18 @@ footer {
     
     .upload-area {
         padding: 1.5rem;
+    }
+    
+    .result-preview {
+        max-width: 150px;
+        max-height: 100px;
+    }
+    
+    .result-details h4 {
+        font-size: 0.9rem;
+    }
+    
+    .result-details p {
+        font-size: 0.8rem;
     }
 }
